@@ -1,0 +1,108 @@
+/* style.module.css */
+
+/* Importação da fonte Star Wars */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.choice_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #000; /* Removido o background image e aplicado fundo preto */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    color: #ffe81f;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+.choice_container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.choice_buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo_gallery{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.darkSide {
+    background-color: #000;
+    color: #ffe81f;
+    border: 2px solid #ffe81f;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+.darkSide:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+.darkSide:active {
+    background-color: #111;
+    box-shadow: 0 2px #666;
+    transform: translateY(0);
+}
+
+.lightSide {
+    background-color: #ffe81f;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+.lightSide:hover {
+    background-color: #ffd700;
+    transform: translateY(-3px);
+}
+
+.lightSide:active {
+    background-color: #e6b800;
+    box-shadow: 0 2px #666;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .choice_container {
+        padding: 10px;
+    }
+
+    .choice_container h2 {
+        font-size: 1.2rem;
+    }
+
+    .choice_buttons {
+        gap: 10px;
+    }
+
+    .darkSide,
+    .lightSide {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
